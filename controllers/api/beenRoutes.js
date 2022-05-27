@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Been } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// add withAuth
 router.post('/', async (req, res) => {
   try {
     const beenData = await Been.create({
@@ -15,6 +16,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// add withAuth
 router.delete('/:id', async (req, res) => {
   try {
     const beenData = await Been.destroy({
