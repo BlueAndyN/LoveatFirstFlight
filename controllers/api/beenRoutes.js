@@ -2,6 +2,16 @@ const router = require('express').Router();
 const { Been } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+router.get('/', async (req, res) => {
+  try {
+    const beenData = await Been.findAll();
+
+    res.status(200).json(beenData);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 // add withAuth
 router.post('/', async (req, res) => {
   try {

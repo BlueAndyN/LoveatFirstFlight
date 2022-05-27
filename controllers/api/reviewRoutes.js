@@ -2,6 +2,17 @@ const router = require('express').Router();
 const { Review } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+router.get('/', async (req, res) => {
+  try {
+    const reviewData = await Review.findAll();
+
+    res.status(200).json(reviewData);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+// add withAuth
 router.post('/', async (req, res) => {
   try {
     const reviewData = await Review.create({
@@ -16,6 +27,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// add withAuth
 router.delete('/:id', async (req, res) => {
   try {
     const reviewData = await Review.destroy({
