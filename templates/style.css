@@ -1,34 +1,39 @@
 ::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
-    opacity: 1; /* Firefox */
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: white;
+  /* Internet Explorer 10-11 */
+  color: white;
 }
 
 ::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: white;
+  /* Microsoft Edge */
+  color: white;
 }
 
 .live-bg {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.custom-h1 {
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .form-input {
-    background: rgba(0, 0, 0, 0.4);
-    height: 50px;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  height: 50px;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
 }
