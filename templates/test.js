@@ -180,8 +180,8 @@ document.getElementById('il').addEventListener('click', function () {
   }
 });
 
-document.getElementById('ia').addEventListener('click', function () {
-  var modal1 = document.getElementById('iamodal');
+document.getElementById('in').addEventListener('click', function () {
+  var modal1 = document.getElementById('inmodal');
   var span1 = document.getElementsByClassName('close')[13];
   modal1.style.display = 'block';
   span1.onclick = function() {
@@ -194,8 +194,8 @@ document.getElementById('ia').addEventListener('click', function () {
   }
 });
 
-document.getElementById('in').addEventListener('click', function () {
-  var modal1 = document.getElementById('inmodal');
+document.getElementById('ia').addEventListener('click', function () {
+  var modal1 = document.getElementById('iamodal');
   var span1 = document.getElementsByClassName('close')[14];
   modal1.style.display = 'block';
   span1.onclick = function() {
@@ -735,9 +735,7 @@ document.getElementById('dc').addEventListener('click', function () {
 //   state1.setAttribute('class', 'want')
 // })
 const beenList = document.querySelector('.been-list')
-console.log(beenList);
 const plannedList = document.querySelector('.planned-list')
-console.log(plannedList);
 
 const outermodal = document.querySelector('.outermodal');
 console.log(outermodal);
