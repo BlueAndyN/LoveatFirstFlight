@@ -180,8 +180,8 @@ document.getElementById('il').addEventListener('click', function () {
   }
 });
 
-document.getElementById('ia').addEventListener('click', function () {
-  var modal1 = document.getElementById('iamodal');
+document.getElementById('in').addEventListener('click', function () {
+  var modal1 = document.getElementById('inmodal');
   var span1 = document.getElementsByClassName('close')[13];
   modal1.style.display = 'block';
   span1.onclick = function() {
@@ -194,8 +194,8 @@ document.getElementById('ia').addEventListener('click', function () {
   }
 });
 
-document.getElementById('in').addEventListener('click', function () {
-  var modal1 = document.getElementById('inmodal');
+document.getElementById('ia').addEventListener('click', function () {
+  var modal1 = document.getElementById('iamodal');
   var span1 = document.getElementsByClassName('close')[14];
   modal1.style.display = 'block';
   span1.onclick = function() {
@@ -735,15 +735,14 @@ document.getElementById('dc').addEventListener('click', function () {
 //   state1.setAttribute('class', 'want')
 // })
 const beenList = document.querySelector('.been-list')
-console.log(beenList);
 const plannedList = document.querySelector('.planned-list')
-console.log(plannedList);
 
 const outermodal = document.querySelector('.outermodal');
-console.log(outermodal);
+// console.log(outermodal);
 
 outermodal.addEventListener('click', function (event) {
   let element=event.target
+  console.log(element);
   if (element.matches("button")===true) {
     if (event.target.textContent==="Been To"){
       const elementsvg = document.getElementById(event.target.name)
@@ -754,7 +753,8 @@ outermodal.addEventListener('click', function (event) {
     beenName.setAttribute('class', 'list-group-item')
     beenName.appendChild(stateName)
     beenList.appendChild(beenName)
-    element.setAttribute("data-dismiss", "modal")
+    // element.setAttribute("data-dismiss", "modal")
+    element.parentNode.parentNode.parentNode.parentNode.style.display = 'none'
     } else if (event.target.textContent==="Want To Go"){
       const elementsvg = document.getElementById(event.target.name)
       elementsvg.classList.remove("been")
@@ -764,6 +764,7 @@ outermodal.addEventListener('click', function (event) {
     plannedName.setAttribute('class', 'list-group-item')
     plannedName.appendChild(stateName)
     plannedList.appendChild(plannedName)
+    element.parentNode.parentNode.parentNode.parentNode.style.display = 'none'
     }
     // console.log(event.target)
     // console.log(event.target.name)
