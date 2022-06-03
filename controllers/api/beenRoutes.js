@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 // add withAuth
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const beenData = await Been.create({
       state_name: req.body.state_name,
@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
 });
 
 // add withAuth
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const beenData = await Been.destroy({
       where: {

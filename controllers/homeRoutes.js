@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment } = require('../models');
+const { User, Been, Planned } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Homepage
@@ -21,13 +21,13 @@ router.get('/', async (req, res) => {
 });
 
 // Login page
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');
     return;
   }
 
-  res.render('login');
+  res.render('homepage');
 });
 
 // Dashboard
@@ -35,7 +35,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Post }],
+      include: [{ model: Been }, { model: Planned}],
     });
 
     const user = userData.get({ plain: true });
