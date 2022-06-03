@@ -3,24 +3,6 @@ const { User, Been, Planned } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Homepage
-router.get('/', async (req, res) => {
-  try {
-    // const postData = await Post.findAll({
-    //   include: [{ model: User }],
-    // });
-
-    // const posts = postData.map((post) => post.get({ plain: true }));
-
-    res.render('homepage', {
-      // posts,
-      // logged_in: req.session.logged_in,
-    });
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
-
-// Login page
 router.get('/', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');
@@ -48,5 +30,22 @@ router.get('/dashboard', withAuth, async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+router.get('/feed', withAuth, async (req, res) => {
+  try {
+    const beenData = await Been.findAll({
+      include: [{ model: User }],
+    })
+
+    const stateBeen = beenData.map((been) => been.get({ plain: true }));
+
+    res.render('feed', {
+      stateBeen,
+      logged_in: req.session.logged_in
+    });
+  } catch (error) {
+    res.status(500).json(error)
+  }
+})
 
 module.exports = router;
