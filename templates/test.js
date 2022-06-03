@@ -734,6 +734,10 @@ document.getElementById('dc').addEventListener('click', function () {
 // wantBtn1.addEventListener('click', function () {
 //   state1.setAttribute('class', 'want')
 // })
+const beenList = document.querySelector('.been-list')
+console.log(beenList);
+const plannedList = document.querySelector('.planned-list')
+console.log(plannedList);
 
 const outermodal = document.querySelector('.outermodal');
 console.log(outermodal);
@@ -745,11 +749,21 @@ outermodal.addEventListener('click', function (event) {
       const elementsvg = document.getElementById(event.target.name)
       elementsvg.classList.remove("want")
     elementsvg.classList.add("been")
+    const beenName = document.createElement('li')
+    const stateName = document.createTextNode(`${elementsvg.textContent}`)
+    beenName.setAttribute('class', 'list-group-item')
+    beenName.appendChild(stateName)
+    beenList.appendChild(beenName)
     element.setAttribute("data-dismiss", "modal")
     } else if (event.target.textContent==="Want To Go"){
       const elementsvg = document.getElementById(event.target.name)
       elementsvg.classList.remove("been")
     elementsvg.classList.add("want")
+    const plannedName = document.createElement('li')
+    const stateName = document.createTextNode(`${elementsvg.textContent}`)
+    plannedName.setAttribute('class', 'list-group-item')
+    plannedName.appendChild(stateName)
+    plannedList.appendChild(plannedName)
     }
     // console.log(event.target)
     // console.log(event.target.name)
