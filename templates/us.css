@@ -16,13 +16,13 @@ svg path:hover {
     cursor: pointer;
 }
 
-svg path.want {
+.want {
     fill: red;
     stroke: #eee;
     stroke-width: .25;
 }
 
-svg path.been {
+.been {
     fill: green;
     stroke: #eee;
     stroke-width: .25;
