@@ -12,8 +12,6 @@ document.getElementById('al').addEventListener('click', function () {
   }
 });
 
-
-
 document.getElementById('ak').addEventListener('click', function () {
   var modal1 = document.getElementById('akmodal');
   var span1 = document.getElementsByClassName('close')[1];
@@ -713,3 +711,50 @@ document.getElementById('dc').addEventListener('click', function () {
     }
   }
 });
+
+// const states = wantBtn.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[3];
+// console.log(states);
+
+// const beenBtn = document.querySelector('.btn1');
+// const wantBtn = document.querySelector('.btn2');
+
+// const state = document.querySelector('#al')
+// console.log(state);
+
+// wantBtn.addEventListener('click', function () {
+//   state.setAttribute('class', 'want')
+// })
+
+// const beenBtn1 = document.querySelector('.btn3');
+// const wantBtn1 = document.querySelector('.btn4');
+
+// const state1 = document.querySelector('#ak')
+// console.log(state);
+
+// wantBtn1.addEventListener('click', function () {
+//   state1.setAttribute('class', 'want')
+// })
+
+const outermodal = document.querySelector('.outermodal');
+console.log(outermodal);
+
+outermodal.addEventListener('click', function (event) {
+  let element=event.target
+  if (element.matches("button")===true) {
+    if (event.target.textContent==="Been To"){
+      const elementsvg = document.getElementById(event.target.name)
+      elementsvg.classList.remove("want")
+    elementsvg.classList.add("been")
+    element.setAttribute("data-dismiss", "modal")
+    } else if (event.target.textContent==="Want To Go"){
+      const elementsvg = document.getElementById(event.target.name)
+      elementsvg.classList.remove("been")
+    elementsvg.classList.add("want")
+    }
+    // console.log(event.target)
+    // console.log(event.target.name)
+    // const elementsvg = document.getElementById(event.target.name)
+    // elementsvg.classList.add("want")
+    // console.log(event.target.textContent)
+  }
+})
