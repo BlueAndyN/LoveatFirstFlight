@@ -61,5 +61,5 @@ Then the state's color will change and I am directed to reviews/blogs on the sta
 
 Kelvin McDaniel - kelvinsinferno@gmail.com
 Marcus Herrera - maherreraiv1987@gmail.com
-David Irving - djirving84@gmail.com
+David Irving - David.Joseph.Irving@gmail.com
 Andrew Nguyen - blueandyn@gmail.com
