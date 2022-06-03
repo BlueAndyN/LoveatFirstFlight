@@ -738,10 +738,11 @@ const beenList = document.querySelector('.been-list')
 const plannedList = document.querySelector('.planned-list')
 
 const outermodal = document.querySelector('.outermodal');
-console.log(outermodal);
+// console.log(outermodal);
 
 outermodal.addEventListener('click', function (event) {
   let element=event.target
+  console.log(element);
   if (element.matches("button")===true) {
     if (event.target.textContent==="Been To"){
       const elementsvg = document.getElementById(event.target.name)
@@ -752,7 +753,8 @@ outermodal.addEventListener('click', function (event) {
     beenName.setAttribute('class', 'list-group-item')
     beenName.appendChild(stateName)
     beenList.appendChild(beenName)
-    element.setAttribute("data-dismiss", "modal")
+    // element.setAttribute("data-dismiss", "modal")
+    element.parentNode.parentNode.parentNode.parentNode.style.display = 'none'
     } else if (event.target.textContent==="Want To Go"){
       const elementsvg = document.getElementById(event.target.name)
       elementsvg.classList.remove("been")
@@ -762,6 +764,7 @@ outermodal.addEventListener('click', function (event) {
     plannedName.setAttribute('class', 'list-group-item')
     plannedName.appendChild(stateName)
     plannedList.appendChild(plannedName)
+    element.parentNode.parentNode.parentNode.parentNode.style.display = 'none'
     }
     // console.log(event.target)
     // console.log(event.target.name)
