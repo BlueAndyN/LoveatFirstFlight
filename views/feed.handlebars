@@ -1,0 +1,16 @@
+<div class='container mt-5 d-flex justify-content-center'>
+  <div class='feed col-md-6'>
+    {{#each stateBeen as |been|}}
+      <div class='card text-center mt-5' style='max-width: 20rem;'>
+        <div class='card-header'><span class='user'>{{been.user.name}}</span></div>
+        <div class='card-body'>
+          <p class='card-text'>
+            just visited
+            <span class='state'>{{been.state_name}}</span>
+          </p>
+        </div>
+        <div class='card-footer'>5/31/2022</div>
+      </div>
+    {{/each}}
+  </div>
+</div>
