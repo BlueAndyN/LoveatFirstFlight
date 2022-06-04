@@ -180,8 +180,8 @@ document.getElementById('il').addEventListener('click', function () {
   }
 });
 
-document.getElementById('ia').addEventListener('click', function () {
-  var modal1 = document.getElementById('iamodal');
+document.getElementById('in').addEventListener('click', function () {
+  var modal1 = document.getElementById('inmodal');
   var span1 = document.getElementsByClassName('close')[13];
   modal1.style.display = 'block';
   span1.onclick = function() {
@@ -194,8 +194,8 @@ document.getElementById('ia').addEventListener('click', function () {
   }
 });
 
-document.getElementById('in').addEventListener('click', function () {
-  var modal1 = document.getElementById('inmodal');
+document.getElementById('ia').addEventListener('click', function () {
+  var modal1 = document.getElementById('iamodal');
   var span1 = document.getElementsByClassName('close')[14];
   modal1.style.display = 'block';
   span1.onclick = function() {
@@ -745,7 +745,7 @@ outermodal.addEventListener('click', function (event) {
       const elementsvg = document.getElementById(event.target.name)
       elementsvg.classList.remove("want")
     elementsvg.classList.add("been")
-    element.setAttribute("data-dismiss", "modal")
+    element.setAttribute("data-dismiss", "modal1")
     } else if (event.target.textContent==="Want To Go"){
       const elementsvg = document.getElementById(event.target.name)
       elementsvg.classList.remove("been")
@@ -757,4 +757,6 @@ outermodal.addEventListener('click', function (event) {
     // elementsvg.classList.add("want")
     // console.log(event.target.textContent)
   }
-})
+});
+
+
