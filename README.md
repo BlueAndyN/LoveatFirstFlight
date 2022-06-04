@@ -1,8 +1,7 @@
 # Team 6 project 2: LoveatFirstFlight
 
 ## Overview:
-As a group, we have collectively developed a user blog for traveling. Our intentions with this application is to create an interactive map of the United States. This application has the ability to select specific states and mark them as either a state you have been to or wanting to travel to. Additionally, you are also enabled to input blog/reviews about states you have traveled to as well.
-
+As a group, we have collectively developed a user blog for traveling. Our intentions with this application is to create an interactive map of the United States. This application has the ability to select specific states and mark them as either a state you have been to or wanting to travel to. Additionally, you are also enabled to see other users and where they have traveled to. Overall this application will help organize and visualize your travels across the United States. 
 
 ## Process:
 
@@ -14,20 +13,22 @@ As a group, we have collectively developed a user blog for traveling. Our intent
 
 4. Create our main hub where they can interact with our map.
 
-5. Develope modales that  will help store user information inside of our database.
+5. Develope modales that will help store user information inside of our database.
 
 6. Get user data to post live feed.
- 
-7. Polish UI with a coding Framework.
 
-8. Publish Site.
+7. Change the map appearance with the correspoding user information/input.
+ 
+8. Polish UI.
+
+9. Publish Site.
 
 ## User Story:
 
 ```
-AS a tourist with many travel plan
-I WANT to have the ability to mark/take notes on map of the United States
-SO THAT I can see all the states I have been to as well as travel destinations I want to go to.
+AS a tourist with many travel plan,
+I WANT to have the ability to mark a map of the United States.
+SO THAT I can visually see all the states I have been to as well as all the states I want to travel to.
 
 
 ```
@@ -44,9 +45,9 @@ Then the map a of the United States will load in with 3 different color catered 
 When I select a state.
 Then a modal will pop-up asking if the selected state you have been to or want to go to.
 When I select been to.
-Then the state's color will change and asked if I would  like to create a small blog about the state.
+Then the state's color will change to the corresponding answer.
 When I select want to go to.
-Then the state's color will change.
+Then the state's color will also change to the corresponding answer.
 
 ```
 
@@ -60,6 +61,8 @@ https://prezi.com/view/LIveOiZ8PnIVs51bqYjp/
 * CSS 
 * JavaScript
 * MySQL
+* Bootstrap
+* SVG Map
 
 ## Contact:
 
