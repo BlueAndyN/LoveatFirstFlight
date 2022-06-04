@@ -755,6 +755,7 @@ outermodal.addEventListener('click', function (event) {
     beenList.appendChild(beenName)
     // element.setAttribute("data-dismiss", "modal")
     element.parentNode.parentNode.parentNode.parentNode.style.display = 'none'
+    
     } else if (event.target.textContent==="Want To Go"){
       const elementsvg = document.getElementById(event.target.name)
       elementsvg.classList.remove("been")
@@ -772,6 +773,4 @@ outermodal.addEventListener('click', function (event) {
     // elementsvg.classList.add("want")
     // console.log(event.target.textContent)
   }
-});
-
-
+})
