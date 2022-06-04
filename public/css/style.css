@@ -124,3 +124,39 @@ cursor: pointer;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
+
+/* Box styles */
+.myBox {
+  border: none;
+  padding: 5px;
+  font: 24px/36px sans-serif;
+  /* width: 200px; */
+  height: 60rem;
+  overflow: auto;
+  }
+  
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  border: 1px solid #00628f;
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background: #00628f;  
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background: #00394f;  
+  }
+
+  @media screen and (max-width: 768px) {
+    .myBox {
+      overflow: visible;
+    }
+  }
