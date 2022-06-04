@@ -32,9 +32,9 @@
 </nav>
 
 <div class='container mt-5 d-flex justify-content-center'>
-  <div class='feed col-md-6'>
+  <div class='feed col-md-6 myBox'>
     {{#each stateBeen as |been|}}
-      <div class='card text-center mt-5' style='max-width: 20rem;'>
+      <div class='card text-center mx-auto mb-5' style='max-width: 20rem;'>
         <div class='card-header'><span class='user'>{{been.user.name}}</span></div>
         <div class='card-body'>
           <p class='card-text'>
@@ -42,7 +42,7 @@
             <span class='state'>{{been.state_name}}</span>
           </p>
         </div>
-        <div class='card-footer'>5/31/2022</div>
+        <div class='card-footer'>{{format_date date_created}}</div>
       </div>
     {{/each}}
   </div>

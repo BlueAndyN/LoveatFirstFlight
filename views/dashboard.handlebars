@@ -1099,6 +1099,9 @@ Place this code in the empty space below. */
       <div class="card-header">States I've been to:</div>
       <div class="card-body">
         <ul class="list-group list-group-flush been-list">
+          {{#each stateBeen as |been|}}
+            {{been.state_name}}
+          {{/each}}
         </ul>
       </div>
     </div>

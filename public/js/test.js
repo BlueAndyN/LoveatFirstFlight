@@ -742,19 +742,36 @@ const outermodal = document.querySelector('.outermodal');
 
 outermodal.addEventListener('click', function (event) {
   let element=event.target
-  console.log(element);
+  // console.log(element);
   if (element.matches("button")===true) {
     if (event.target.textContent==="Been To"){
       const elementsvg = document.getElementById(event.target.name)
       elementsvg.classList.remove("want")
     elementsvg.classList.add("been")
     const beenName = document.createElement('li')
-    const stateName = document.createTextNode(`${elementsvg.textContent}`)
+    const stateName = document.createTextNode(`${elementsvg.textContent.trim()}`)
     beenName.setAttribute('class', 'list-group-item')
     beenName.appendChild(stateName)
     beenList.appendChild(beenName)
     // element.setAttribute("data-dismiss", "modal")
     element.parentNode.parentNode.parentNode.parentNode.style.display = 'none'
+
+    const state_name = elementsvg.textContent.trim();
+    if (state_name) {
+      const response = fetch(`/api/been`, {
+          method: 'POST',
+          body: JSON.stringify({ state_name }),
+          headers: {
+              'Content-Type': 'application/json'
+          }
+      });
+
+      if (response.ok) {
+          document.location.replace(`/dashboard`);
+      } else {
+          alert('Failed to post state been to database');
+      }
+  }
     
     } else if (event.target.textContent==="Want To Go"){
       const elementsvg = document.getElementById(event.target.name)
