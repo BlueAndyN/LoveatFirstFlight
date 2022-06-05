@@ -1099,8 +1099,8 @@ Place this code in the empty space below. */
       <div class="card-header">States I've been to:</div>
       <div class="card-body">
         <ul class="list-group list-group-flush been-list">
-          {{#each user as |users|}}
-            <li>{{users.been.state_name}}</li>
+          {{#each beens as |been|}}
+            <li class="list-group-item">{{been.state_name}}</li>
           {{/each}}
         </ul>
       </div>
@@ -1112,6 +1112,9 @@ Place this code in the empty space below. */
       <div class="card-header">States I plan to visit:</div>
       <div class="card-body">
         <ul class="list-group list-group-flush planned-list">
+          {{#each planneds as |planned|}}
+            <li class="list-group-item">{{planned.state_name}}</li>
+          {{/each}}
         </ul>
       </div>
     </div>

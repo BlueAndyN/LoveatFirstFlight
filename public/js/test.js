@@ -768,8 +768,6 @@ outermodal.addEventListener('click', function (event) {
 
       if (response.ok) {
           document.location.replace(`/dashboard`);
-      } else {
-          alert('Failed to post state been to database');
       }
   }
     
@@ -796,8 +794,6 @@ outermodal.addEventListener('click', function (event) {
 
       if (response.ok) {
           document.location.replace(`/dashboard`);
-      } else {
-          alert('Failed to post state been to database');
       }
   }
     }
