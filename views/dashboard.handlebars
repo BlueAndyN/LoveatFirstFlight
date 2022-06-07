@@ -31,6 +31,33 @@
             </div>
 </nav>
 
+<!-- loading screen -->
+    <div id="loader">
+      <span style="--i:1;"></span>
+      <span style="--i:2;"></span>
+      <span style="--i:3;"></span>
+      <span style="--i:4;"></span>
+      <span style="--i:5;"></span>
+      <span style="--i:6;"></span>
+      <span style="--i:7;"></span>
+      <span style="--i:8;"></span>
+      <span style="--i:9;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <i id="plane"class="fa-solid fa-plane"></i>
+    </div>
+    <!-- map content -->
+    <div id="myDiv" class="container d-flex justify-content-center animate-bottom" style="display:none; text-align:center">
+
 <div class="container d-flex justify-content-center">
       <div class="col-md-12 map-content">
         <div class="col svg">
@@ -223,12 +250,7 @@ Place this code in the empty space below. */
 <path id="wy" d="m 355.3,143.7 -51,-5.3 -57.3,-7.9 -2,10.7 -8.5,54.8 -3.3,21.9 32.1,4.8 44.9,5.7 37.5,3.4 3.7,-44.2 z">
 <title>Wyoming</title></path>
 
-<path id="dc" d="m 803.5,252 -2.6,-1.8 -1,1.7 .5,.4 .4,.1 .6,.5 .3,.7 -.1,.5 .2,.5 z">
-<title>District of Columbia</title></path>
-
 </g>
-<circle class="state borders dccircle dc" cx="801.6" cy="252.1" r="5">
-<title>District of Columbia</title></circle>
 
 </svg>
 </div>
@@ -1096,7 +1118,7 @@ Place this code in the empty space below. */
 <div class="row state-lists mt-5">
   <div class="col col-md-6 states-been">
     <div class="card mb-3">
-      <div class="card-header">States I've been to:</div>
+      <div class="card-header" style="background-color: #FED330;">States I've been to:</div>
       <div class="card-body">
         <ul class="list-group list-group-flush been-list">
           {{#each beens as |been|}}
@@ -1109,7 +1131,7 @@ Place this code in the empty space below. */
 
   <div class="col col-md-6 states-planned">
     <div class="card mb-3">
-      <div class="card-header">States I plan to visit:</div>
+      <div class="card-header" style="background-color: #26DE81;">States I plan to visit:</div>
       <div class="card-body">
         <ul class="list-group list-group-flush planned-list">
           {{#each planneds as |planned|}}

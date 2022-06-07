@@ -710,19 +710,19 @@ document.getElementById('wy').addEventListener('click', function () {
   }
 });
 
-document.getElementById('dc').addEventListener('click', function () {
-  var modal1 = document.getElementById('dcmodal');
-  var span1 = document.getElementsByClassName('close')[50];
-  modal1.style.display = 'block';
-  span1.onclick = function() {
-    modal1.style.display = 'none';
-  }
-  window.onclick = function(event) {
-    if (event.target == modal1) {
-      modal1.style.display = 'none';
-    }
-  }
-});
+// document.getElementById('dc').addEventListener('click', function () {
+//   var modal1 = document.getElementById('dcmodal');
+//   var span1 = document.getElementsByClassName('close')[50];
+//   modal1.style.display = 'block';
+//   span1.onclick = function() {
+//     modal1.style.display = 'none';
+//   }
+//   window.onclick = function(event) {
+//     if (event.target == modal1) {
+//       modal1.style.display = 'none';
+//     }
+//   }
+// });
 
 // const states = wantBtn.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[3];
 // console.log(states);
@@ -787,3 +787,4 @@ outermodal.addEventListener('click', function (event) {
 });
 
 
+myFunction();
