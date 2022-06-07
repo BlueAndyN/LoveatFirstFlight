@@ -768,8 +768,6 @@ outermodal.addEventListener('click', function (event) {
 
       if (response.ok) {
           document.location.replace(`/dashboard`);
-      } else {
-          alert('Failed to post state been to database');
       }
   }
     
@@ -783,6 +781,21 @@ outermodal.addEventListener('click', function (event) {
     plannedName.appendChild(stateName)
     plannedList.appendChild(plannedName)
     element.parentNode.parentNode.parentNode.parentNode.style.display = 'none'
+
+    const state_name = elementsvg.textContent.trim();
+    if (state_name) {
+      const response = fetch(`/api/planned`, {
+          method: 'POST',
+          body: JSON.stringify({ state_name }),
+          headers: {
+              'Content-Type': 'application/json'
+          }
+      });
+
+      if (response.ok) {
+          document.location.replace(`/dashboard`);
+      }
+  }
     }
     // console.log(event.target)
     // console.log(event.target.name)
