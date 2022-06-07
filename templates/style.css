@@ -1,3 +1,10 @@
+#colors {
+color: #26DE81;
+color: #D2DAE2;
+color: #FED330;
+color: #4B6584;
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
@@ -14,23 +21,50 @@
   color: white;
 }
 
-.live-bg {
+
+#myVideo {
   position: fixed;
-  left: 50%;
-  top: 50%;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
   z-index: -1;
-  transform: translate(-50%, -50%);
+}
+
+#logo {
+width: 40vh;
+height: auto;
+margin-top: 5vh;
+}
+
+h2 {
+  color: #26DE81;;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-weight: normal;
+  font-size: 1.5rem;
 }
 
 .custom-h1 {
   font-size: 3rem;
   font-weight: bold;
   padding-bottom: 3rem;
+  color: #FED330;
+  
+}
+
+.btn {
+ background-color: rgba(38,222,129,.4);
+ border: none;
 }
 
 .form-input {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(75, 101, 132, 0.4);
   height: 50px;
   border-radius: 0.5rem;
+  border-color: #4B6584;
   margin-bottom: 1rem;
+  color:#26DE81;
+  outline-color: #FED330;
+
 }
+
