@@ -1,3 +1,15 @@
+// page loader
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+// map interaction
 document.getElementById('al').addEventListener('click', function () {
   var modal1 = document.getElementById('almodal');
   var span1 = document.getElementsByClassName('close')[0];
@@ -698,19 +710,19 @@ document.getElementById('wy').addEventListener('click', function () {
   }
 });
 
-document.getElementById('dc').addEventListener('click', function () {
-  var modal1 = document.getElementById('dcmodal');
-  var span1 = document.getElementsByClassName('close')[50];
-  modal1.style.display = 'block';
-  span1.onclick = function() {
-    modal1.style.display = 'none';
-  }
-  window.onclick = function(event) {
-    if (event.target == modal1) {
-      modal1.style.display = 'none';
-    }
-  }
-});
+// document.getElementById('dc').addEventListener('click', function () {
+//   var modal1 = document.getElementById('dcmodal');
+//   var span1 = document.getElementsByClassName('close')[50];
+//   modal1.style.display = 'block';
+//   span1.onclick = function() {
+//     modal1.style.display = 'none';
+//   }
+//   window.onclick = function(event) {
+//     if (event.target == modal1) {
+//       modal1.style.display = 'none';
+//     }
+//   }
+// });
 
 const beenList = document.querySelector('.been-list')
 const plannedList = document.querySelector('.planned-list')
@@ -774,3 +786,5 @@ outermodal.addEventListener('click', function (event) {
     }
   }
 })
+
+myFunction();
