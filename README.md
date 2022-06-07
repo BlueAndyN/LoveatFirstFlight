@@ -52,8 +52,9 @@ Then the state's color will also change to the corresponding answer.
 ```
 
 ## Website link:
-https://fathomless-cliffs-99430.herokuapp.com/
-https://prezi.com/view/LIveOiZ8PnIVs51bqYjp/
+
+* https://fathomless-cliffs-99430.herokuapp.com/
+* https://prezi.com/view/LIveOiZ8PnIVs51bqYjp/
 
 ## Built With:
 
