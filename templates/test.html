@@ -14,11 +14,37 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/183caa4948.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./us.css" />
     <title>US Map</title>
   </head>
-  <body>
-    <div class="container d-flex justify-content-center">
+  <body onload="myFunction()" style="margin:0;">
+    <!-- loading screen -->
+    <div id="loader">
+      <span style="--i:1;"></span>
+      <span style="--i:2;"></span>
+      <span style="--i:3;"></span>
+      <span style="--i:4;"></span>
+      <span style="--i:5;"></span>
+      <span style="--i:6;"></span>
+      <span style="--i:7;"></span>
+      <span style="--i:8;"></span>
+      <span style="--i:9;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <i id="plane"class="fa-solid fa-plane"></i>
+    </div>
+    <!-- map content -->
+    <div id="myDiv" class="container d-flex justify-content-center animate-bottom" style="display:none; text-align:center">
       <div class="col-md-12 map-content">
         <div class="col svg">
           <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -54,7 +80,7 @@ Place this code in the empty space below. */
 
 <g class="state">
 
-
+  
     <path id="al" fill="#FFFFFF" stroke="#231F20" stroke-miterlimit="10"  d="m 643,467.4 .4,-7.3 -.9,-1.2 -1.7,-.7 -2.5,-2.8 .5,-2.9 48.8,-5.1 -.7,-2.2 -1.5,-1.5 -.5,-1.4 .6,-6.3 -2.4,-5.7 .5,-2.6 .3,-3.7 2.2,-3.8 -.2,-1.1 -1.7,-1 v -3.2 l -1.8,-1.9 -2.9,-6.1 -12.9,-45.8 -45.7,4 1.3,2 -1.3,67 4.4,33.2 .9,-.5 1.3,.1 .6,.4 .8,-.1 2,-3.8 v -2.3 l 1.1,-1.1 1.4,.5 3.4,6.4 v .9 l -3.3,2.2 3.5,-.4 4.9,-1.6 z">
         <title>Alabama</title></path>
       
@@ -210,12 +236,12 @@ Place this code in the empty space below. */
 <path id="wy" d="m 355.3,143.7 -51,-5.3 -57.3,-7.9 -2,10.7 -8.5,54.8 -3.3,21.9 32.1,4.8 44.9,5.7 37.5,3.4 3.7,-44.2 z">
 <title>Wyoming</title></path>
 
-<path id="dc" d="m 803.5,252 -2.6,-1.8 -1,1.7 .5,.4 .4,.1 .6,.5 .3,.7 -.1,.5 .2,.5 z">
-<title>District of Columbia</title></path>
-
+<!-- <path id="dc" d="m 803.5,252 -2.6,-1.8 -1,1.7 .5,.4 .4,.1 .6,.5 .3,.7 -.1,.5 .2,.5 z">
+<title>District of Columbia</title></path> -->
 </g>
-<circle class="state borders dccircle dc" cx="801.6" cy="252.1" r="5">
-<title>District of Columbia</title></circle>
+
+<!-- <circle class="state borders dccircle dc" cx="801.6" cy="252.1" r="5">
+<title>District of Columbia</title></circle> -->
 
 </svg>
 </div>
@@ -1083,7 +1109,7 @@ Place this code in the empty space below. */
 <div class="row state-lists mt-5">
   <div class="col col-md-6 states-been">
     <div class="card mb-3">
-      <div class="card-header">States I've been to:</div>
+      <div class="card-header" style="background-color: #FED330;">States I've been to:</div>
       <div class="card-body">
         <ul class="list-group list-group-flush been-list">
         </ul>
@@ -1093,7 +1119,7 @@ Place this code in the empty space below. */
 
   <div class="col col-md-6 states-planned">
     <div class="card mb-3">
-      <div class="card-header">States I plan to visit:</div>
+      <div class="card-header" style="background-color: #26DE81;">States I plan to visit:</div>
       <div class="card-body">
         <ul class="list-group list-group-flush planned-list">
         </ul>
