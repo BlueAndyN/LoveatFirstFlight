@@ -1,3 +1,15 @@
+// page loader
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+// map interaction
 document.getElementById('al').addEventListener('click', function () {
   var modal1 = document.getElementById('almodal');
   var span1 = document.getElementsByClassName('close')[0];
