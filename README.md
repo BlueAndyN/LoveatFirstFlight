@@ -65,6 +65,12 @@ Then the state's color will also change to the corresponding answer.
 * Bootstrap
 * SVG Map
 
+## Screenshots
+
+![screenshot of landing page](./assets/LFF-1.png)
+![screenshot of dashboard](./assets/LFF-2.png)
+![screenshot of feed page](./assets/LFF-3.png)
+
 ## Contact:
 
 ```
